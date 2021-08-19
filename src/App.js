@@ -7,6 +7,7 @@ import Main from "./components/Main"
 import Footer from "./components/Footer"
 // import $ from'jquery';
 // import Popper from'popper.js';
+//popper isnt need 
 
 const App =() =>{
 const [users , setUsers] = useState([])
