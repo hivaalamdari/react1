@@ -1,15 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import "./Main.css"
 
-class Main extends Component{
+// class Main extends Component{
      
-    render(){
+//     render(){
 
-        return(
-            <div className="main">main</div>
-        );
-    }
+//         return(
+//             <div className="main">
 
+//             </div>
+//         );
+//     }
+
+// }
+
+// export default Main
+const Main = (props) => {
+console.log(props)
+    return ( 
+        <div className="main">
+             {props.users.map((e)=>{
+      return(<div key={e.id}>
+        <h3>{e.name}</h3>
+        <span>{e.email}</span>
+      </div>)
+      
+    })}
+          </div>
+
+     );
 }
-
-export default Main
+ 
+export default Main;

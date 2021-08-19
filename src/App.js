@@ -1,4 +1,5 @@
 import "./App.css";
+import React , {useState , useEffect} from "react";
 import'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./components/Header";
 import axios from "axios"
@@ -7,13 +8,23 @@ import Footer from "./components/Footer"
 // import $ from'jquery';
 // import Popper from'popper.js';
 
-function App() {
-  axios.get("https://jsonplaceholder.typicode.com/users").then(e=>console.log(e))
+const App =() =>{
+const [users , setUsers] = useState([])
+useEffect(()=>{
+  axios.get("https://jsonplaceholder.typicode.com/users")
+  .then(e=> {
+    setUsers (e.data)
+    console.log(e.data)
+  })
+},[])
+
 
   return (
     <div className="App">
       <Header/>
-      <Main/>
+      <Main users = {users}/>
+   
+      
       <Footer/>
     </div>
   );
