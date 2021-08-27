@@ -5,6 +5,15 @@ import Header from "./components/Header";
 import axios from "axios"
 import Main from "./components/Main"
 import Footer from "./components/Footer"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Post from './components/pages/Post/Post'
+import AboutUs from "./components/pages/AboutUs/AboutUs";
+import Contacts from "./components/pages/Contacts/Contacts";
 // import $ from'jquery';
 // import Popper from'popper.js';
 //popper isnt need 
@@ -22,11 +31,27 @@ useEffect(()=>{
 
   return (
     <div className="App">
+      <Router>
       <Header/>
-      <Main users = {users}/>
-   
-      
-      <Footer/>
+        
+
+        <Switch>
+        <Route path="/post">
+            <Post/>
+          </Route>
+          <Route path="/aboutus">
+            <AboutUs/>
+          </Route>
+          <Route path="/contacts">
+            <Contacts/>
+          </Route>
+
+          <Route path="/">
+            <Main users ={users}/>
+          </Route>
+        </Switch>
+        <Footer/>
+        </Router>
     </div>
   );
 }
