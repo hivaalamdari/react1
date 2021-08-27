@@ -20,15 +20,15 @@ console.log(props)
     return ( 
         <div className="main">
              {props.users.map((e)=>{
-      return(<div key={e.id}>
-        <h3>{e.name}</h3>
-        <span>{e.email}</span>
-      </div>)
+              return(<div key={e.id}>
+                <h3>{e.name}</h3>
+                <span>{e.email}</span>
+              </div>)
       
-    })}
-          </div>
+      })}
+      </div>
 
-     );
+    );
 }
  
 export default Main;
