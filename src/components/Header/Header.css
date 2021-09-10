@@ -1,13 +1,22 @@
 .header {
-    padding: 10px 15px;
-    background-color: black;
-    color : rgba(236, 213, 12, 0.979);
-    height : 15%;
-    max-height:150px ;
-  }
-  
-  .menu-inside{
-    padding: 10px 15px;
-  
-    
-  }
+  padding: 10px 15px;
+  background-color: black;
+  color: rgba(236, 213, 12, 0.979);
+  height: 15%;
+  max-height: 150px;
+}
+
+.menu-inside {
+  padding: 10px 15px;
+}
+.HeaderUl {
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.HeaderLi{
+flex-direction: column;
+}
+

@@ -17,6 +17,7 @@ import Contacts from "./components/pages/Contacts/Contacts";
 // import $ from'jquery';
 // import Popper from'popper.js';
 //popper isnt need 
+import Todos from "./components/pages/Todos/Todos"; 
 
 const App =() =>{
 const [users , setUsers] = useState([])
@@ -44,6 +45,9 @@ useEffect(()=>{
           </Route>
           <Route path="/contacts">
             <Contacts/>
+          </Route>
+          <Route path="/todos">
+            <Todos/>
           </Route>
 
           <Route path="/">

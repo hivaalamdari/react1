@@ -23,25 +23,30 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <ul>
-                <li>
+              <ul className="HeaderUl">
+                <li className="HeaderLi">
                   <Link className="nav-item nav-link" to="/">
                     Home
                   </Link>
                 </li>
-                <li>
+                <li className="HeaderLi">
                   <Link className="nav-item nav-link" to="/aboutus">
                     AboutUs
                   </Link>
                 </li>
-                <li>
+                <li className="HeaderLi">
                   <Link className="nav-item nav-link" to="/contacts">
                     Contacts
                   </Link>
                 </li>
-                <li>
+                <li className="HeaderLi">
                   <Link className="nav-item nav-link" to="/post">
                     Post
+                  </Link>
+                </li>
+                <li className="HeaderLi">
+                  <Link className="nav-item nav-link" to="/todos">
+                    Todo
                   </Link>
                 </li>
               </ul>
